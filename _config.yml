@@ -1,5 +1,5 @@
 title:               My digital garden
-include:             ['_pages']
+#include:             ['_pages']
 
 permalink:           pretty
 relative_permalinks: false
@@ -14,11 +14,17 @@ sass:
 collections:
   notes:
     output: true
-    permalink: /:path
+    permalink: /notes/:path.html
+  pages:
+    output: true
+    permalink: /pages/:name.html
+  posts:
+    output: true
+    permalink: /posts/:year/:month/:day/:slug.html
 
 defaults:
   - scope:
-      path: "**/*"
+      path: "**/*.html"
     values:
       layout: "default"
   - scope:
